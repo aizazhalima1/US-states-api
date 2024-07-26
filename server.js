@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const cors= require('cors')
 const PORT = 8000
+app.use(cors())
 
 const states={
     'AL':{
@@ -137,7 +138,7 @@ app.get('/api/:name',(req,res)=>{
 
     }
 })
-app.use(cors)
+
 
 
 app.listen(process.env.PORT||PORT,()=>{
