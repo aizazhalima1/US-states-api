@@ -137,7 +137,7 @@ app.get('/api/:name',(req,res)=>{
 
     }
 })
-
+app.use(cors)
 
 
 app.listen(process.env.PORT||PORT,()=>{
