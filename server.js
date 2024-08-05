@@ -129,13 +129,13 @@ app.get('/',(req,res)=>{
 
 
 app.get('/api/:name',(req,res)=>{
+   
     const stName=req.params.name.toUpperCase()
     if(states[stName]){
-        res.json(states[stName].fullName)
+       res.json(states[stName].fullName)
     }
     else{
-        res.json(states['unknown'])
-
+      res.json(states['unknown'])
     }
 })
 
